@@ -1,0 +1,5 @@
+{
+  "domain": "fl-app",
+  "endpoint": "/check-ingress",
+  "full_path:": "fl-app/check-ingress"
+}

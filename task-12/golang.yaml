@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: golang
+  name: golang
+  namespace: exam-23
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: golang
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: golang
+    spec:
+      containers:
+        - image: abdulaziz6665/golang:v3
+          name: golang
+          env:
+            - name: CPU
+              valueFrom:
+                resourceFieldRef:
+                  containerName: golang
+                  resource: requests.cpu
+            - name: MEMORY
+              valueFrom:
+                resourceFieldRef:
+                  containerName: golang
+                  resource: requests.memory
+            - name: LOG_LEVEL
+              valueFrom:
+                configMapKeyRef:
+                  name: info
+                  key: log_leveI
+            - name: GRPC_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: info
+                  key: grpc_port
+            - name: DB_URI
+              valueFrom:
+                secretKeyRef:
+                  name: database2
+                  key: VALUE
+            - name: POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+            - name: ENVIRONMENT
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+          resources:
+            requests:
+              cpu: 100m
+              memory: 64Mi
+            limits:
+              cpu: 200
+              memory: 128Mi
+status: {}

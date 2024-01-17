@@ -1,0 +1,7 @@
+// 20240117211343
+// http://abdulaziz.nvrbckdown.uz/load-capability
+
+{
+  "cpus": "1",
+  "memorys": "67108864"
+}

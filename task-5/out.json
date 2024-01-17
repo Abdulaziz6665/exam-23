@@ -1,0 +1,5 @@
+{
+  "env": "staging",
+  "http_port": "80",
+  "string": "Welcome to DevOps Course!"
+}

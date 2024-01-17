@@ -1,0 +1,5 @@
+kubectl create deploy fl-app --image nvrbckdown/flask-app -n exam-23
+
+kubectl port-forward deploy/fl-app 3003:5000 -n exam-23
+
+kubectl port-forward pod/fl-app-64cb9bf69b-zwccx 3003:5000 -n exam-23

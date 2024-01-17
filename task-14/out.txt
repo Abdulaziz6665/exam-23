@@ -1,0 +1,6 @@
+// 20240117205131
+// http://abdulaziz.nvrbckdown.uz/
+
+{
+  "message": "Welcome to your Kubernetes Exam!"
+}

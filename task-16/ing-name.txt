@@ -1,0 +1,2 @@
+NAME     CLASS   HOSTS                     ADDRESS        PORTS   AGE
+go-ing   nginx   abdulaziz.nvrbckdown.uz   10.233.60.91   80      11m
